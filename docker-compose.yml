@@ -1,0 +1,12 @@
+version: '4.17'
+services:
+  webserver:
+    container_name: apache
+    build:
+      context: ./
+      dockerfile: ./webserver.Dockerfile
+    volumes:
+      - {DOCUMENTROOT}:/var/www/html/ 
+    ports:
+      - 80:80
+
